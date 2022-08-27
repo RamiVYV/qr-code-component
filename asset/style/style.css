@@ -28,9 +28,32 @@ body{
     margin: 4rem auto;
     padding: 1rem ;
 }
-/* ------------------SECTION-I------------------------ */card__topCard{
 
+.card:hover{
+    cursor: pointer;
+    box-shadow: 1rem 1rem 1rem;
+    transition: 1000ms;
+    transform: translateY(-1rem)rotateZ(360deg);
 }
+
+/* ------------------SECTION-I------------------------ */
+.card__topCard{
+    animation: upCenter 300ms none;
+}
+@keyframes upCenter {
+    
+    0%{
+        transform: translateY(-32rem);
+    }
+
+    100%{ 
+        transform: translateY(0);
+    }
+}
+
+
+
+
 .card__topCard__img{
     width: 100%;
     border-radius: 1rem;
@@ -45,9 +68,34 @@ body{
     margin-top: 1rem;
 }
 
+.card__botomCard__title {
+        animation: leftCenter 200ms none ;
+    }
 
+    @keyframes leftCenter{
+        0%{
+            transform: translateX(-500px);
+        }
+        100%{
+            transform: translateX(0);
+        }
+    }
 
+    .card_botomCard_text{
+        animation: rightCenter 200ms none;
+    }
 
+    @keyframes rightCenter{
+        0%{
+            transform: translateX(500px);
+        }
+        100%{transform: translateX(0);
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+        }        
+    }
+/* ------------------FOOTER----------------------- */
+.attribution { font-size: 11px;
+                text-align: center;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); }
